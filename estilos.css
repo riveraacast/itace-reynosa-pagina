@@ -1,0 +1,1478 @@
+/* =========================================
+   ITACE PLANTEL REYNOSA
+   HOJA DE ESTILOS CSS
+========================================= */
+
+/* PALETA DE COLORES */
+:root {
+    --vino: #5A1730;
+    --vino-oscuro: #3D1021;
+    --crema: #F2E5C8;
+    --beige: #D8B879;
+    --blanco: #FFFFFF;
+    --gris: #333333;
+    --gris-claro: #F7F4F0;
+    --borde: #E2D5C7;
+    --sombra: 0 6px 18px rgba(61, 16, 33, 0.12);
+}
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--gris);
+    background-color: #FAF8F5;
+    line-height: 1.6;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: var(--vino);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea,
+summary {
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+    outline: 3px solid #B77B2D;
+    outline-offset: 3px;
+}
+
+/* ENCABEZADO PRINCIPAL */
+.portada {
+    min-height: 390px;
+    padding: 45px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+    background: linear-gradient(135deg, var(--vino), var(--vino-oscuro));
+    border-bottom: 8px solid var(--beige);
+}
+
+.logo {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: var(--blanco);
+    padding: 8px;
+    border: 4px solid var(--beige);
+    margin-bottom: 15px;
+}
+
+.portada h1 {
+    margin: 5px 0;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.2;
+}
+
+.subtitulo {
+    margin: 12px 0 24px;
+    font-size: 1.05rem;
+    max-width: 750px;
+}
+
+/* BOTONES */
+.boton {
+    display: inline-block;
+    background-color: var(--beige);
+    color: var(--vino-oscuro);
+    text-decoration: none;
+    border: 2px solid var(--beige);
+    border-radius: 8px;
+    padding: 11px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.boton:hover {
+    background-color: var(--blanco);
+    color: var(--vino);
+    transform: translateY(-2px);
+}
+
+/* MENÚ PRINCIPAL */
+nav {
+    background-color: var(--blanco);
+    padding: 20px;
+    border-bottom: 1px solid var(--borde);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+nav h2 {
+    color: var(--vino);
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0 0 14px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 9px 13px;
+    text-decoration: none;
+    color: var(--vino);
+    background-color: var(--crema);
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-size: 0.92rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background-color: var(--vino);
+    color: var(--blanco);
+    border-color: var(--vino);
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    width: min(1200px, 94%);
+    margin: 0 auto;
+}
+
+.seccion {
+    padding: 55px 30px;
+    margin: 28px 0;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    box-shadow: var(--sombra);
+    scroll-margin-top: 20px;
+}
+
+.seccion-clara {
+    background-color: var(--gris-claro);
+}
+
+.seccion h2 {
+    color: var(--vino);
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    line-height: 1.25;
+    margin: 0 0 18px;
+}
+
+.seccion h3 {
+    color: var(--vino);
+    line-height: 1.35;
+}
+
+.seccion p {
+    max-width: 950px;
+}
+
+.etiqueta {
+    color: #895A24;
+    font-weight: bold;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+/* BIENVENIDA */
+.bienvenida {
+    text-align: center;
+}
+
+.bienvenida p {
+    margin: 0 auto 25px;
+}
+
+.imagen-principal {
+    width: 100%;
+    max-height: 470px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid var(--crema);
+}
+
+/* TEXTO DESTACADO */
+.texto-destacado {
+    background-color: #FBF6EC;
+    border-left: 5px solid var(--beige);
+    padding: 20px 24px;
+    border-radius: 0 10px 10px 0;
+}
+
+.texto-destacado p {
+    margin-top: 0;
+}
+
+.texto-destacado p:last-child {
+    margin-bottom: 0;
+}
+
+/* MISIÓN, VISIÓN Y VALORES */
+.bloques-institucionales {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.bloque-institucional {
+    background-color: var(--blanco);
+    padding: 22px;
+    border: 1px solid var(--borde);
+    border-top: 5px solid var(--vino);
+    border-radius: 10px;
+}
+
+.bloque-institucional h3 {
+    margin-top: 0;
+}
+
+.bloque-institucional p {
+    margin-bottom: 0;
+}
+
+.aviso-academico {
+    margin-top: 20px;
+    padding: 13px 16px;
+    background-color: #FFF7E8;
+    border-left: 4px solid #B77B2D;
+    border-radius: 5px;
+    font-size: 0.92rem;
+}
+
+/* GALERÍAS */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.tarjeta {
+    min-width: 0;
+    overflow: hidden;
+    padding: 18px;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(61, 16, 33, 0.07);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: var(--crema);
+}
+
+.tarjeta h3 {
+    margin: 15px 0 8px;
+}
+
+.tarjeta p {
+    margin-bottom: 0;
+}
+
+/* ESPECIALIDADES */
+.especialidades {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.especialidad {
+    padding: 22px;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    background: linear-gradient(180deg, #FFFFFF, #FBF6EC);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.especialidad:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra);
+}
+
+.especialidad span {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    background-color: var(--vino);
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.especialidad h3 {
+    font-size: 1.05rem;
+    margin: 8px 0 10px;
+}
+
+.especialidad p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* TABLAS */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 22px;
+    border-radius: 8px;
+    border: 1px solid var(--borde);
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+}
+
+th,
+td {
+    padding: 13px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+}
+
+th {
+    color: var(--blanco);
+    background-color: var(--vino);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #FBF6EC;
+}
+
+tbody tr:hover {
+    background-color: #F3E5CE;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* DIRECTORIO DOCENTE */
+.filtros-directorio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 18px;
+    align-items: center;
+    margin: 25px 0 15px;
+    padding: 20px;
+    background-color: #FBF6EC;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+}
+
+.filtros-directorio label {
+    font-weight: bold;
+    color: var(--vino);
+}
+
+.filtros-directorio input,
+.filtros-directorio select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #BDAE9C;
+    border-radius: 7px;
+    background-color: var(--blanco);
+    color: var(--gris);
+}
+
+#contadorDocentes {
+    font-weight: bold;
+    color: var(--vino);
+}
+
+.directorio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.docente-card {
+    padding: 20px;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--blanco);
+    box-shadow: 0 4px 12px rgba(61, 16, 33, 0.06);
+}
+
+.docente-card h3 {
+    margin: 0 0 10px;
+}
+
+.docente-card p {
+    margin: 6px 0;
+    overflow-wrap: anywhere;
+}
+
+.docente-area {
+    display: inline-block;
+    padding: 5px 9px;
+    color: var(--vino);
+    background-color: var(--crema);
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: bold;
+}
+
+.sin-resultados {
+    padding: 20px;
+    background-color: #FFF7E8;
+    border: 1px solid var(--beige);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* PREGUNTAS FRECUENTES */
+.preguntas {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.preguntas details {
+    padding: 16px 18px;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 9px;
+}
+
+.preguntas summary {
+    color: var(--vino);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.preguntas details p {
+    margin-bottom: 0;
+    padding-top: 8px;
+}
+
+/* AUDIO */
+.multimedia-lista {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.multimedia-tarjeta {
+    min-width: 0;
+    padding: 22px;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--vino);
+    border-radius: 10px;
+}
+
+.multimedia-tarjeta h3 {
+    margin-top: 0;
+}
+
+.multimedia-tarjeta audio {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 12px;
+}
+
+/* VIDEO */
+.video-contenedor {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    border: 4px solid var(--crema);
+    border-radius: 12px;
+    background-color: #000000;
+}
+
+.video-contenedor video {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    margin: 0 auto;
+}
+
+/* CONTACTO */
+.form-contacto {
+    max-width: 750px;
+    margin-top: 25px;
+    padding: 24px;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.campo-formulario label {
+    color: var(--vino);
+    font-weight: bold;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #BDAE9C;
+    border-radius: 7px;
+    color: var(--gris);
+    background-color: #FFFFFF;
+}
+
+.campo-formulario textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    border-color: var(--vino);
+}
+
+.form-contacto button {
+    border: none;
+}
+
+#respuestaContacto {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: var(--vino);
+}
+
+/* CRÉDITOS */
+.lista-creditos {
+    padding-left: 25px;
+}
+
+.lista-creditos li {
+    margin-bottom: 10px;
+}
+
+/* PIE DE PÁGINA */
+.pie {
+    margin-top: 40px;
+    padding: 30px 20px;
+    color: var(--blanco);
+    background-color: var(--vino-oscuro);
+    border-top: 6px solid var(--beige);
+    text-align: center;
+}
+
+.pie p {
+    margin: 5px 0;
+}
+
+/* BOTÓN VOLVER ARRIBA */
+.volver-arriba {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 100;
+    display: none;
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--blanco);
+    border-radius: 50%;
+    color: var(--blanco);
+    background-color: var(--vino);
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+}
+
+.volver-arriba.visible {
+    display: block;
+}
+
+.volver-arriba:hover {
+    background-color: var(--vino-oscuro);
+}
+
+/* ANIMACIÓN DE APARICIÓN */
+.seccion.revelar {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.seccion.revelar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ADAPTACIÓN PARA TABLETAS */
+@media (max-width: 900px) {
+    .especialidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .directorio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bloques-institucionales {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 600px) {
+    .portada {
+        min-height: 330px;
+        padding: 35px 16px;
+    }
+
+    .logo {
+        width: 105px;
+        height: 105px;
+    }
+
+    nav {
+        padding: 15px 10px;
+    }
+
+    .menu {
+        gap: 7px;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .seccion {
+        padding: 30px 18px;
+        margin: 18px 0;
+    }
+
+    .galeria,
+    .especialidades,
+    .directorio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta img {
+        height: 210px;
+    }
+
+    .filtros-directorio {
+        grid-template-columns: 1fr;
+    }
+
+    .form-contacto {
+        padding: 18px;
+    }
+
+    .multimedia-tarjeta {
+        padding: 16px;
+    }
+
+    .volver-arriba {
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+/* RESPETAR LA PREFERENCIA DE MENOS MOVIMIENTO */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .seccion.revelar {
+        opacity: 1;
+        transform: none;
+    }
+}
+/* ==========================================
+   ESTILOS COMPLEMENTARIOS PARA NUEVAS SECCIONES
+   Se conserva el diseño original del ITACE
+========================================== */
+
+/* MISIÓN, VISIÓN Y VALORES */
+.bloques-institucionales {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1150px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.bloque-institucional {
+    background: var(--blanco);
+    border: 3px solid var(--beige);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 5px 12px #00000012;
+    transition: 0.3s;
+}
+
+.bloque-institucional:hover {
+    border-color: var(--vino);
+    background: var(--rosa-claro);
+    transform: translateY(-4px);
+}
+
+.bloque-institucional h3 {
+    color: var(--vino);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.bloque-institucional p {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* AVISOS INFORMATIVOS */
+.aviso-academico {
+    max-width: 950px;
+    margin: 25px auto;
+    padding: 15px 20px;
+    background: var(--rosa-claro);
+    border-left: 5px solid var(--vino);
+    border-radius: 8px;
+    color: var(--gris);
+    font-size: 14px;
+    text-align: left;
+}
+
+/* TARJETAS DE PROYECTOS SIN IMÁGENES */
+.tarjeta-texto {
+    text-align: left;
+    padding: 24px;
+}
+
+.tarjeta-texto h3 {
+    color: var(--vino);
+    margin-top: 5px;
+}
+
+.tarjeta-texto p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* PREGUNTAS FRECUENTES */
+.preguntas-lista {
+    max-width: 950px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.preguntas-lista details {
+    margin-bottom: 14px;
+    padding: 18px 22px;
+    background: var(--blanco);
+    border: 2px solid var(--beige);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.preguntas-lista details[open] {
+    border-color: var(--vino);
+    background: var(--rosa-claro);
+}
+
+.preguntas-lista summary {
+    color: var(--vino);
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1.6;
+}
+
+.preguntas-lista details p {
+    margin: 15px 0 0;
+    line-height: 1.7;
+}
+
+/* FORMULARIO DE CONTACTO */
+.formulario-contenedor {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 28px;
+    background: var(--blanco);
+    border: 3px solid var(--beige);
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 5px 15px #00000012;
+}
+
+.formulario-contenedor h3 {
+    color: var(--vino);
+    text-align: center;
+    margin-top: 0;
+}
+
+.formulario-contenedor > p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.campo-formulario label {
+    color: var(--vino);
+    font-weight: bold;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b9a8ad;
+    border-radius: 8px;
+    background: var(--blanco);
+    color: var(--gris);
+    font: inherit;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    outline: 3px solid #d8b87988;
+    border-color: var(--vino);
+}
+
+.campo-formulario textarea {
+    resize: vertical;
+}
+
+.boton-enviar {
+    cursor: pointer;
+    font: inherit;
+}
+
+.estado-formulario {
+    margin-top: 15px;
+    color: var(--vino);
+    font-weight: bold;
+}
+
+/* ADAPTACIÓN PARA TABLETAS */
+@media (max-width: 950px) {
+    .bloques-institucionales {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 600px) {
+    .bloques-institucionales {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .bloque-institucional {
+        padding: 18px;
+    }
+
+    .aviso-academico {
+        padding: 13px;
+        font-size: 13px;
+    }
+
+    .tarjeta-texto {
+        padding: 16px;
+    }
+
+    .formulario-contenedor {
+        padding: 16px;
+    }
+
+    .preguntas-lista details {
+        padding: 15px;
+    }
+}
+/* ==================================
+   DISEÑO DECORATIVO ITACE
+================================== */
+
+/* TARJETAS DE ACTIVIDADES */
+.galeria .tarjeta {
+    border: 3px solid var(--beige);
+    border-radius: 20px;
+    padding: 14px;
+    background: var(--blanco);
+    box-shadow: 0 8px 20px #3D102120;
+    transition: 0.3s ease;
+}
+
+.galeria .tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: var(--vino);
+    box-shadow: 0 12px 25px #5A173035;
+}
+
+.galeria .tarjeta img {
+    border: 4px solid var(--crema);
+    border-radius: 14px;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* NOTICIAS */
+.galeria-noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.tarjeta-noticia {
+    background: white;
+    border: 2px solid var(--beige);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 7px 20px #00000015;
+    transition: 0.3s;
+}
+
+.tarjeta-noticia:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px #5A173030;
+}
+
+.tarjeta-noticia img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 5px solid var(--vino);
+}
+
+.contenido-noticia {
+    padding: 22px;
+}
+
+.contenido-noticia h3 {
+    color: var(--vino);
+    margin: 12px 0;
+    font-size: 21px;
+}
+
+.contenido-noticia p {
+    line-height: 1.6;
+}
+
+.fecha-noticia {
+    color: var(--vino);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* DIRECTORIO DOCENTE */
+.directorio-controles {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    gap: 12px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--crema);
+    border: 2px solid var(--beige);
+    border-radius: 18px;
+}
+
+.directorio-controles input,
+.directorio-controles select {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid var(--beige);
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.directorio-controles input:focus,
+.directorio-controles select:focus {
+    border-color: var(--vino);
+}
+
+.boton-limpiar {
+    background: var(--vino);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-limpiar:hover {
+    background: var(--vino-oscuro);
+    transform: scale(1.03);
+}
+
+.directorio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+.tarjeta-docente {
+    background: white;
+    border: 2px solid var(--beige);
+    border-top: 7px solid var(--vino);
+    border-radius: 18px;
+    padding: 22px;
+    text-align: left;
+    box-shadow: 0 6px 18px #00000012;
+    transition: 0.3s;
+}
+
+.tarjeta-docente:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px #5A173025;
+}
+
+.tarjeta-docente h3 {
+    color: var(--vino);
+    margin: 10px 0;
+}
+
+.tarjeta-docente p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.docente-area {
+    display: inline-block;
+    background: var(--crema);
+    color: var(--vino);
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.foto-docente {
+    width: 105px;
+    height: 105px;
+    display: block;
+    margin: 0 auto 15px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--beige);
+    background: var(--crema);
+}
+
+.contador-docentes {
+    color: var(--vino);
+    font-weight: bold;
+}
+
+/* VIDEOS */
+.videos-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.tarjeta-video {
+    background: white;
+    border: 3px solid var(--beige);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 7px 20px #00000015;
+    transition: 0.3s;
+}
+
+.tarjeta-video:hover {
+    transform: translateY(-5px);
+    border-color: var(--vino);
+}
+
+.tarjeta-video h3 {
+    color: var(--vino);
+    margin-top: 5px;
+}
+
+.tarjeta-video video {
+    width: 100%;
+    max-height: 320px;
+    border: 4px solid var(--crema);
+    border-radius: 12px;
+    background: black;
+}
+
+.tarjeta-video p {
+    line-height: 1.5;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 850px) {
+    .galeria-noticias,
+    .directorio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .directorio-controles {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria-noticias,
+    .directorio-grid,
+    .videos-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-noticia img {
+        height: 200px;
+    }
+
+    .directorio-controles {
+        padding: 14px;
+    }
+}
+/* IMÁGENES DE VIDA ESTUDIANTIL Y PROYECTOS */
+
+.galeria .tarjeta {
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: var(--blanco);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria .tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+.galeria .tarjeta h3 {
+    color: var(--vino);
+    margin: 18px 15px 10px;
+}
+
+.galeria .tarjeta p {
+    margin: 0 15px 20px;
+    line-height: 1.6;
+}
+
+.galeria .tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+/* =====================================
+   MAPA MENTAL DE ESPECIALIDADES
+===================================== */
+
+.mapa-seccion {
+    text-align: center;
+    padding: 80px 5%;
+    background: var(--crema);
+}
+
+.introduccion-mapa {
+    max-width: 700px;
+    margin: 15px auto 45px;
+    line-height: 1.7;
+}
+
+/* ESTRUCTURA GENERAL */
+
+.mapa-mental {
+    display: grid;
+    grid-template-columns: 1fr 250px 1fr;
+    gap: 20px;
+    max-width: 1250px;
+    margin: auto;
+    align-items: stretch;
+}
+
+/* COLUMNAS */
+
+.mapa-columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 18px;
+}
+
+/* TARJETAS DE CADA RAMA */
+
+.rama {
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    position: relative;
+    color: white;
+    box-shadow: 5px 7px 12px rgba(0,0,0,0.20);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rama:hover {
+    transform: scale(1.04);
+    box-shadow: 8px 10px 18px rgba(0,0,0,0.25);
+    z-index: 2;
+}
+
+.rama-texto {
+    flex: 1;
+}
+
+.rama h3 {
+    font-size: 14px;
+    margin: 0 0 7px;
+    line-height: 1.3;
+}
+
+.rama p {
+    font-size: 11px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* NUMERACIÓN */
+
+.numero {
+    min-width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    background: #eee9e2;
+    color: var(--vino);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-weight: bold;
+    box-shadow: 3px 4px 8px rgba(0,0,0,0.18);
+}
+
+/* FORMAS DE LAS RAMAS */
+
+.mapa-columna:first-child .rama {
+    border-radius: 65px 15px 15px 65px;
+    text-align: right;
+}
+
+.mapa-columna:first-child .rama .numero {
+    order: 2;
+}
+
+.mapa-columna:last-child .rama {
+    border-radius: 15px 65px 65px 15px;
+    text-align: left;
+}
+
+/* COLORES DE LAS 12 ESPECIALIDADES */
+
+.rama-1 { background: linear-gradient(120deg, #7d1d35, #a93b52); }
+.rama-2 { background: linear-gradient(120deg, #633b80, #9566a9); }
+.rama-3 { background: linear-gradient(120deg, #354b83, #647cb0); }
+.rama-4 { background: linear-gradient(120deg, #277c83, #55a6a2); }
+.rama-5 { background: linear-gradient(120deg, #9b6b27, #c59b4c); }
+.rama-6 { background: linear-gradient(120deg, #85517d, #b77aa5); }
+.rama-7 { background: linear-gradient(120deg, #9b3153, #c75c7e); }
+.rama-8 { background: linear-gradient(120deg, #b35d22, #db8a42); }
+.rama-9 { background: linear-gradient(120deg, #9b8c25, #c4b74e); }
+.rama-10 { background: linear-gradient(120deg, #277b91, #55a6b7); }
+.rama-11 { background: linear-gradient(120deg, #417b5d, #6ba982); }
+.rama-12 { background: linear-gradient(120deg, #78456e, #a86e9b); }
+
+/* CÍRCULO CENTRAL */
+
+.mapa-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.centro-circulo {
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #ffffff, #ded6c9);
+    border: 9px solid #bda982;
+    box-shadow: 0 0 0 12px rgba(90, 23, 48, 0.10),
+                0 12px 25px rgba(0,0,0,0.20);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 100px;
+    z-index: 2;
+}
+
+.centro-texto {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--vino);
+    letter-spacing: 2px;
+}
+
+.centro-subtexto {
+    font-size: 10px;
+    font-weight: bold;
+    color: #555;
+    letter-spacing: 2px;
+}
+
+.centro-linea {
+    width: 65px;
+    height: 3px;
+    background: #bda982;
+    margin: 12px 0;
+}
+
+.centro-circulo strong {
+    color: var(--vino);
+    font-size: 30px;
+}
+
+.centro-circulo small {
+    color: #555;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 850px) {
+
+    .mapa-mental {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .mapa-centro {
+        grid-row: 1;
+        padding: 20px 0;
+    }
+
+    .centro-circulo {
+        width: 190px;
+        height: 190px;
+        position: static;
+    }
+
+    .mapa-columna {
+        gap: 15px;
+    }
+
+    .rama {
+        min-height: 100px;
+    }
+
+    .mapa-columna:first-child .rama {
+        text-align: left;
+        border-radius: 15px 60px 60px 15px;
+    }
+
+    .mapa-columna:first-child .rama .numero {
+        order: 0;
+    }
+
+    .mapa-columna:last-child .rama {
+        border-radius: 15px 60px 60px 15px;
+    }
+}
