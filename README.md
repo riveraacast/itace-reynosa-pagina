@@ -16,4 +16,4 @@ Noticias y eventos.
 Directorio de maestros.
 Galería y contenido multimedia.
 
-Este proyecto forma parte de mis trabajos escolares y todavía estoy trabajando en algunos detalles.
+Este proyecto forma parte como evaluacion para el segundo parcial y todavía estoy trabajando en algunos detalles.
